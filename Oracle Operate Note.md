@@ -45,3 +45,8 @@
     where a.tablespace_name=b.tablespace_name
     order by ((a.bytes-b.bytes)/a.bytes) desc;
 ```
+
+## 获取当前周的开始时间
+```
+SELECT TRUNC(TO_DATE(to_char(sysdate,'yyyy-mm-dd hh24:mi:ss'),'yyyy-mm-dd hh24:mi:ss'),'IW')FROM DUAL
+```
