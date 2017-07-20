@@ -50,3 +50,8 @@
 ```
 SELECT TRUNC(TO_DATE(to_char(sysdate,'yyyy-mm-dd hh24:mi:ss'),'yyyy-mm-dd hh24:mi:ss'),'IW')FROM DUAL
 ```
+
+## 序号 
+```sql
+ROW_NUMBER() OVER(order by OM.ORDERDATE desc nulls last) as RN
+```
